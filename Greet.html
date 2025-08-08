@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Raksha Bandhan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pacifico', cursive;
+      overflow: hidden;
+      background: linear-gradient(270deg, #ffe4f3, #d0f0ff, #fffacd);
+      background-size: 600% 600%;
+      animation: gradientBG 20s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff4fc6;
+      margin: 20px;
+      text-shadow: 2px 2px 4px #ffffff;
+    }
+    
+     p {
+      font-size: 2em;
+      color: #ff4fc6;
+      margin: 5px;
+      text-shadow: 2px 2px 4px #ffffff;
+    }
+
+    .center-image {
+      width: 80%;
+      max-width: 400px;
+      margin-top: 10px;
+      border-radius: 10px; /* Optional: adds rounded corners */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
+    }
+
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Raksha Bandhan</h1>
+  <p>On this special day, I just want to say thank you for always being there with your love, support, and annoying but sweet presence 😄. You're truly one of a kind, and I'm lucky to have you in my life.
+
+– Love, 
+Palaksh
+  </p>
+
+  <script>
+    const flowers = ["🌸", "🌼", "💮"];
+    const count = 50;
+
+    for (let i = 0; i < count; i++) {
+      const flower = document.createElement("div");
+      flower.className = "flower";
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.animationDuration = 3 + Math.random() * 5 + "s";
+      flower.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+      document.body.appendChild(flower);
+    }
+  </script>
+</body>
+</html>
